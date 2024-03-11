@@ -1,19 +1,228 @@
-/* *********************************** */
+/* Importar CSS externos */
 @import url(normalize.min.css);
 @import url(reset.css);
 
-/* *********************************** */
-/* *** ESTILOS GENERALES *** */
-/* *********************************** */
+/* Variables globales */
+:root {
+  /* Colores */
+  --verde100: #496e68;
+  --verde200: #64948d;
+  --verde400: #2c7359;
+  --verde600: #174031;
+  --oscuro100: #304a46;
+  --oscuro400: #192926;
+  --oscuro600: #091311;
 
-/* Tipografía */
-@font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  /* Tamaños de fuente */
+  --p: 1rem;
+  --h6: 1.125rem;
+  --h5: 1.25rem;
+  --h4: 1.5rem;
+  --h3: 2rem;
+  --h2: 2.25rem;
+  --h1: 2.5rem;
 }
 
-/* ******************************** */
+/* Estilos generales */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--verde600, #174031);
+  padding: 100px;
+}
 
-/* Colores */
+/* Estilos para la información del curso */
+.course-info {
+  display: flex;
+  width: 54.625rem;
+  height: 61.3125rem;
+  padding: 3.125rem 7.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  border-radius: 1.875rem 0rem 0rem 1.875rem;
+  background: var(--verde400, #2C7359);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.50);
+}
 
-/* ******************************** */
+/* Estilos para el formulario */
+.form-wrapper {
+  display: flex;
+  width: 40rem;
+  height: 61.3125rem;
+  padding: 9.375rem 0rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0rem 1.875rem 1.875rem 0rem;
+  background: var(--verde600, #174031);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.50);
+}
+
+/* Estilos para los títulos */
+.course-title,
+.form-title {
+
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 0%;
+  /* 0rem */
+}
+
+/* Estilos para el subtítulo */
+.course-subtitle,
+.online,
+.form-subtitle {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.online {
+  color: #091311;
+
+  /* h4 24px */
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+
+}
+
+/* Estilos para la descripción */
+.course-description {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Estilos para los precios */
+.course-price,
+.price {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.875rem;
+}
+
+/* Estilos para los descuentos */
+.course-discount {
+  color: #FFF;
+  text-align: center;
+
+  /* h5 20px */
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.descuento {
+  color: #091311;
+  font-family: Inter;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* Estilos para los botones */
+
+.btn-curso {
+  display: flex;
+  width: 9.375rem;
+  height: 3.5rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: #174031;
+
+
+  /* tipografia btn */
+  color: #C6C6C6;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.form-submit {
+
+  display: flex;
+  width: 9.375rem;
+  height: 3.5rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  flex-shrink: 0;
+
+
+  color: #C6C6C6;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none
+}
+
+/* Estilos para los campos de formulario */
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.625rem;
+  width: 80%;
+
+}
+
+.input-name,
+.input-surname,
+.input-address,
+.input-email,
+.input-comments {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  height: 50px;
+  border-radius: 0.625rem;
+  background: #FFF;
+
+}
+
+/* Estilos para el botón de envío del formulario */
+.form-submit {
+  display: flex;
+  width: 40%;
+  height: 3.125rem;
+  border-radius: 0.3125rem;
+  background: var(--verde400, #2C7359);
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-family: Hind;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+}
